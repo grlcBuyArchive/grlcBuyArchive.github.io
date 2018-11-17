@@ -1,0 +1,280 @@
+<html>
+  <head>
+    <title>grlcBuy | Garlicoin Marketplace</title>
+    <meta name="description" content="Garlicoin marketplace that supports auctions and buy it now listings.">
+    <meta name="subject" content="Garlicoin Marketplace">
+    <meta name="language" content="EN">
+    <meta name="copyright"content="grlcBuy">
+    <meta name="author" content="@ar0n#1462">
+    <meta name="keywords" content="grlcBuy,grlc Buy,Garlicoin,marketplace,exchange">
+    <meta property="og:title" content="grlcBuy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.imgur.com/Q9H3geY.png" />
+    <meta property="og:description" content="Garlicoin marketplace that supports auctions and buy it now listings." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="A2gaBXmBfACFDxdTtY1OMr2IFHqiOVhWNc2ihcNG80o" />
+
+    <style>
+      body {
+      margin-bottom: 60px; /* Margin bottom by footer height */
+      }
+      .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px; /* Set the fixed height of the footer here */
+      line-height: 60px; /* Vertically center the text there */
+      background-color: #f5f5f5;
+      }
+      .pagination {
+      position: float;
+      bottom: 0px;
+      right: 15px;
+      }
+      tr {
+        height:140px;
+        min-height:140px;
+        max-height:140px;
+      }
+    </style>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <style>
+      nav {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+      <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link nav" href="/me.html">Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav" href="/create.html">Create Listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Balance: ₲0
+        </span>
+        <form class="form-inline my-2 my-lg-0 nav">
+          <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+          <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+          <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+        </form>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm" style="padding:20px;">
+          <form action="" method="get">
+            <div style="">
+              <div class="form-group">
+                <label>Search</label>
+                <input type="text" class="form-control" name="search" placeholder="Item Name" value="">
+              </div>
+              <div class="form-group">
+                <label>Sort By</label>
+                <select name="sort" class="form-control">
+                  <option value="1">Ending Soonest</option>
+                  <option value="2">Highest Price</option>
+                  <option value="3">Lowest Price</option>
+                  <option value="4">Newly Listed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Item Location</label>
+                <select style="" class="form-control" name="country">
+              <optionvalue="" title=""></option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Type</label>
+                <select name="type1" class="form-control">
+                  <option>All</option>
+                  <option value="0">Auction</option>
+                  <option value="1">Buy It Now</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select name="type" class="form-control" id="type" onchange="typeChange()">
+                  <option>All</option>
+                  <option value="1">Digital</option>
+                  <option value="0">Physical</option>
+                </select>
+              </div>
+              <div class="form-group" id="condition">
+                  <label>Item Condition</label>
+                  <select class="form-control" name="condition">
+                      <option>All</option>
+                      <option>New</option>
+                      <option value="1">New other</option>
+                      <option value="2">Manufacturer refurbished</option>
+                      <option value="3">Seller refurbished</option>
+                      <option value="4">Used</option>
+                      <option value="5">For parts or not working</option>
+                  </select>
+              </div>
+              <label>Price Range</label>
+              <div class="form-row" style="margin: auto;">
+                <input style="width:80px" class="form-control form-control-sm" type="text" name="min_price" value="" placeholder="0"> <label style="padding-left:10px;padding-right:10px;"> to </label> <input style="width:80px;" class="form-control form-control-sm" name="max_price" value="" type="text" placeholder="0">
+              </div>
+              <br>
+              <button class="btn btn-primary btn-block" type="submit">Go</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-7">
+          <br>
+          <div style="overflow-y:auto;">
+          <table class="table table-no-border">
+            <thead>
+              <tr style="height:0px;">
+                <th scope="col" style="max-width: 190px"></th>
+                <th scope="col">Title</th>
+                <th scope="col">Time Left</th>
+                <th scope="col">Price</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Location</th>
+                <th scope="col">User</th>
+              </tr>
+            </thead>
+
+          </table>
+        </div>
+          <nav style="bottom:20px;left: 50%;vertical-align:bottom;padding-top:20px;">
+            <ul class="pagination justify-content-end">
+              <li class="page-item">
+                <a class="page-link" href="/?page=" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="/?page=">1</a></li>
+              <li class="page-item"><a class="page-link" href="/?page=">2</a></li>
+              <li class="page-item"><a class="page-link" href="/?page=">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="/?page=" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-sm" style="padding:20px;">
+          <div class="card">
+            <div class="card-header">
+              Advert
+            </div>
+            <img src="https://i.imgur.com/h073P8e.png" class="mx-auto" style="width:275px;height:36px;" alt="GRLC GANG">
+            <div class="card-body">
+              <p class="card-text"><a href="https://grlcgang.com/">GRLC GANG</a> is an optimized garlicoin pool with 0% fee and the most features of any pool available!</p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-header">
+              Advert
+            </div>
+            <img src="https://i.imgur.com/eeo6LCD.png" class="mx-auto" style="width:200px;height:110px;" alt="Roasted Garlic Pool">
+            <div class="card-body">
+              <p class="card-text">Come on down onto the <a href="http://roastedgarlicpool.fun/">Roasted Garlic Pool</a>! We have constant giveaways and a great community! We have a low fee of only 0.5%!</p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-header">
+              Advert
+            </div>
+            <div class="card-body">
+              <p class="card-text">Put your ad here. <a href="/contact.html">Contact us</a>.</p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-header">
+              Advert
+            </div>
+            <div class="card-body">
+              <p class="card-text">Put your ad here. <a href="/contact.html">Contact us</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">grlcBuy Archive</h5>
+          </div>
+          <div class="modal-body">
+            This is a HTML demo/archive of the fully functional crypto auction site grlcBuy. All of the pages found here were once fully operational and used daily by the users of the site, as this is a HTML version this functionality cannot be used. <br><br>An archive of the live site can be found <a href="https://web.archive.org/web/20180620175827/https://grlcbuy.com/">here.</a><br><br>Please check out the <a href="/docs.html">Docs</a> to see more info.</a>.
+          </div>
+          <div class="modal-footer">
+            <!--<button type="button" id="modaldeny" onclick="noAdvert()" class="btn btn-danger" data-dismiss="modal">No Thanks</button>-->
+            <button type="button" onclick="" class="btn btn-success" data-dismiss="modal">I Understand</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      if (localStorage.getItem("betanotice") != 1) {
+        $(document).ready(function(){
+          $('#myModal').modal({backdrop: 'static'});
+        });
+      }
+      function betanotice() {
+        localStorage.setItem("betanotice", 1);
+      }
+    </script>
+    <script>
+    function typeChange() {
+      var e = document.getElementById("type");
+      var strUser = e.options[e.selectedIndex].value;
+
+      if(strUser == 1) {
+        var element = document.getElementById("condition");
+        element.classList.add("invisible");
+      } else {
+        var element = document.getElementById("condition");
+        element.classList.remove("invisible");
+      }
+    }
+    </script>
+  </body>
+</html>

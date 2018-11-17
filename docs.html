@@ -1,0 +1,96 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<style>
+  nav {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+  <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link nav" href="/me.html">Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav" href="/create.html">Create Listing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Balance: ₲0
+    </span>
+    <form class="form-inline my-2 my-lg-0 nav">
+      <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+      <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+      <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+    </form>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-6">
+      <br>
+      <h2>What is grlcBuy?</h2>
+      <p>grlcBuy is an online cryptocurrency marketplace that evolves around Garlicoin. Users can sell and buy items utilising this coin.</p>
+
+      <h2>Why should I use this site?</h2>
+      <p>If you have some GRLC laying around, instead of paying the fees to get it converted to fiat you can purchase something here and save some money. As goes for getting your hands on some GRLC, sell stuff laying around that you don't need anymore.</p>
+
+      <h2>What is this: <a class="badge badge-dark" style="color:#92f400;">+80,-20,80%</a>?</h2>
+      <p>This badge shows a users ratings. The +80 represents the number of good rated sales and the -20 represents the number of badly rated sales. The percentage shows a sellers success rate.</p>
+
+      <h2>Does grlcBuy provide refunds?</h2>
+      <p>Because of the nature of cryptocurrency and the size of grlcBuy we do not provide refunds, users must go off of the user rating system.</p>
+
+      <h2>Is my account secure?</h2>
+      <p>Yes. Much time has been spent implementing security, all backend code has been reviewed to make sure there are no exploits or lee way where there doesn't need to be. The server itself has a firewall and has been reviewed using Lynis. There is even 2FA for those that need it.</p>
+
+      <h2>What fees are there?</h2>
+      <p>The final seller fee is 5%. The initial anti-spam listing fee is 1 for auctions or 1 per day for buy it now listings.</p>
+
+      <h2>What is allowed to be listed?</h2>
+      <p>Anything that is legal in the United Kingdom and your country that you can deliver to the buyer.</p>
+
+      <h2>Why isn't my balance increasing?</h2>
+      <p>Transaction's have to have 6 confirmations to be counted and added to your balance, this is checked every 30 seconds.</p>
+
+      <h2>How are purchases locked in?</h2>
+      <p>To bid or purchase and item you must deposit to your account, this guarantees that bids are final and cannot be cheated.</p>
+
+      <h2>How are passwords stored?</h2>
+      <p>Hashed using BCRYPT with PHP’s password_hash() function, then stored securely in database. So even in the event that user passwords are leaked, as long as the password is relatively secure it can't be revealed. Even grlcBuy itself can't crack your passwords, unless it's <code>123456</code>.</p>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>

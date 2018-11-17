@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Item Name</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+        <meta property="og:title" content="Item Name | grlcBuy Buy It Now | ₲1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://i.imgur.com/U2gqTjGt.png" />
+        <meta property="og:description" content="An item being sold." />
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:description" content="An item being sold." />
+        <meta name="twitter:image" content="https://i.imgur.com/U2gqTjGt.png" />
+        <meta name="twitter:title" content="Item Name | grlcBuy Buy It Now | ₲1" />
+
+        <style type="text/css">
+            .wrapper{ width: 500px; padding: 20px; flex: 0 0 500px ;}
+        </style>
+
+        <script>
+            // Update the count down every 1 second
+            var distance = 1 * 1000;
+            function myLoop () {
+                setTimeout(function () {
+                    // Find the distance between now an the count down date
+                    distance -= 1000;
+                    console.log(distance);
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Output the result in an element with id="demo"
+                    if(distance > 86400000) {
+                        document.getElementById("timeLeft").value = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                    } else if (distance > 3600000) {
+                        document.getElementById("timeLeft").value = hours + "h " + minutes + "m " + seconds + "s ";
+                    } else {
+                        document.getElementById("timeLeft").value = minutes + "m " + seconds + "s ";
+                        document.getElementById("timeLeft").style.color = "red";
+                    }
+
+                    // If the count down is over, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").value = "ENDED";
+                    }
+                    myLoop();
+                }, 1000);
+            }
+
+          myLoop();
+        </script>
+
+    </head>
+
+    <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <style>
+        nav {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        }
+      </style>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link nav" href="/me.html">Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/create.html">Create Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Balance: ₲0
+          </span>
+          <form class="form-inline my-2 my-lg-0 nav">
+            <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+          </form>
+        </div>
+      </nav>
+
+
+        <div class="container">
+        <div class="row">
+        <div class="col-sm">
+
+            <h2>Item</h2>
+
+            <p>This is an item being sold.</p>
+
+                <div class="form-group">
+
+                    <label>Title</label>
+
+                    <input readonly type="text" class="form-control" value="Item Name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Description</label>
+
+                    <textarea readonly rows="8" type="text" class="form-control" style="resize: none;" value="">An item being sold.</textarea>
+
+                </div>
+
+                <div class="container-fluid">
+                <div class="row">
+                <div class="col" style="padding-left: 0; padding-right: 10px;">
+
+                <div class="form-group">
+
+                    <label>User</label>
+
+                    <input readonly type="text" class="form-control" style="resize: none; cursor: pointer;" onclick="location.href='user.html" value="grlcBuy">
+
+                </div>
+
+                <label>Price</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="grlc">₲</span>
+                    </div>
+                    <input readonly type="text" class="form-control" aria-describedby="grlc" value="1">
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <label>Ends In</label>
+
+                    <input readonly type="text" id="timeLeft" class="form-control" value="11:00:33">
+
+                </div>
+                </div>
+                <div class="col" style="padding-left: 10px; padding-right: 0;">
+                  <div class="form-group">
+                      <label>Sold</label>
+                      <input readonly type="text" class="form-control" value="5">
+                  </div>
+                  <div class="form-group">
+                      <label>Quantity</label>
+                      <input readonly type="text" class="form-control" value="10">
+                  </div>
+                  <div class="form-group">
+                      <label>Bids</label>
+                      <input readonly type="text" class="form-control" value="21">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-success" style="width:300px;" role="alert">You are the highest bidder.</div>
+
+                <div class="form-group">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                  Purchase
+                </button>
+                </div>
+
+        </div>
+        <div class="col-sm" style="padding-top:100px;">
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/bfRjGnS"><a href="//imgur.com/bfRjGnS"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Purchase Item</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="" method="post" onSubmit="return savemsg();">
+              <div class="modal-body">
+                <label>Price</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="grlc">₲</span>
+                    </div>
+                    <input type="number" name="bid" step=".01" class="form-control" aria-describedby="grlc" value="1" readonly>
+                </div>
+                <small class="form-text text-muted">Minimum of 0.1+ previous bid.</small>
+                <br>
+                <div class="form-group">
+
+                    <label>Message for seller</label>
+
+                    <textarea type="text" name="message" maxlength="500" id="message" class="form-control" placeholder="Please include information such as delivery address, contact details etc." required></textarea>
+
+                    <small style="text-align:right;" class="form-text text-muted"><span id="meslen">0</span>/500</small>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="modaldeny" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <input type="submit" class="btn btn-success" value="Purchase">
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        document.getElementById('message').onkeyup = function(){
+            document.getElementById("meslen").innerHTML = this.value.length;
+            if (this.value.length >= 500) {
+                document.getElementById("meslen").style.color = "red";
+            } else if (this.value.length > 300) {
+                document.getElementById("meslen").style.color = "orange";
+            } else {
+                document.getElementById("meslen").style.color = "#6c757d";
+            }
+        }
+        function savemsg() {
+            var msg = document.getElementById("message").value;
+            localStorage.setItem("msg", msg);
+
+            return true;
+        }
+        document.getElementById("message").value = localStorage.getItem("msg");
+        </script>
+
+    </body>
+
+    </html>

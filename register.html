@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Register</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+  	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <style>
+        html,
+        body {
+        height: 100%;
+        }
+
+        body {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+        }
+
+        .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+        }
+        .form-signin .checkbox {
+        font-weight: 400;
+        }
+        .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+        z-index: 2;
+        }
+        .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        }
+    </style>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action="" method="post">
+      <a href="/"><img class="mb-4" src="https://i.imgur.com/2hNVaE9.png" alt="" width="260" height="71"></a>
+      <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
+      <br>
+      <label for="inputPassword" class="sr-only">Password</label>
+	  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+      <label for="inputPassword" class="sr-only">Confirm Password</label>
+      <input type="password" id="inputConfirmPassword" name="confirm_password" class="form-control" placeholder="Confirm Password" required>
+      <small style="text-align:right;" class="form-text text-muted"><span id="crack">Instantly</span> to crack</small>
+	  <div class="g-recaptcha" data-sitekey="6LcwHFYUAAAAAKE-MVNp-1AdEsWvpfo6CXkjNf3j"></div>
+	  <br>
+	  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+	  <small>By signing up, you agree to the <a href="/terms.html">Terms and Conditions</a> and the <a href="/docs.html">Docs</a></small>
+	  <!--<br>
+	  <p>Already have an account? <a href="login.html">Sign in now</a>.</p>-->
+    <br><br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </form>
+  <script src="https://cdn.jsdelivr.net/npm/how-secure-is-my-password@0.2.0/build/hsimp.min.js"></script>
+	<script>
+	hsimp({
+		options: {
+			calculationsPerSecond: 100000, // 10 billion,
+			good: 31557600e3, // 1,000 years
+			ok: 31557600 // 1 year
+		},
+		outputTime: function (time, input) {
+			console.log(time, input);
+      document.getElementById("crack").innerHTML = time;
+		},
+		outputChecks: function (checks, input) {
+			console.log(checks, input);
+		}
+	}, document.getElementById("inputPassword"));
+	</script>
+  </body>
+</html>

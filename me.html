@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Profile</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+        <style type="text/css">
+
+            .wrapper{ padding: 20px; }
+
+            .left{ flex: 0 0 400px; padding: 20px; }
+
+            .qrcode{
+              display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+              display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+              justify-content: center;
+              align-items: center;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <style>
+        nav {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        }
+      </style>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link nav" href="/me.html">Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/create.html">Create Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Balance: ₲0
+          </span>
+          <form class="form-inline my-2 my-lg-0 nav">
+            <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+          </form>
+        </div>
+      </nav>
+
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-sm left">
+
+            <h2>Profile</h2>
+            <hr>
+            <form action="" method="post">
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input readonly type="text" name="username"class="form-control" value="grlcBuy">
+                </div>
+
+                <div class="form-group">
+                    <label>About Me</label>
+                    <textarea type="text" rows="8" name="about" class="form-control" maxlength="500" placeholder="Tell us a little about yourself.">I'm a user.</textarea>
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary" value="Update Profile">
+                </div>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" value="Devices" onclick="window.location.href='/devices.html'" />
+                </div>
+
+                  <div class="form-group">
+                      <input type="button" class="btn btn-primary" value="Enable 2FA" onclick="window.location.href='/2fa.html'" />
+                  </div>
+                  <div class="form-group">
+                      <input type="button" class="btn btn-danger" value="Disable 2FA" onclick="window.location.href='/2fa.html'" />
+                  </div>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-danger" value="Change Password" onclick="window.location.href='/reset.html'" />
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-sm left">
+          <br>
+          <div id="qrcode" class="qrcode"></div>
+          <br>
+          <label>Deposit Address</label>
+          <div class="input-group">
+              <input readonly type="text" name="deposit" class="form-control" value="Gjnsbdvcuibw3u8rt">
+          </div>
+          <small class="form-text text-muted">You can get GRLC from <a href="https://coinfalcon.com/">coinfalcon.com</a>.</small>
+
+          <br>
+
+          <label>Balance</label>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="grlc">₲</span>
+              </div>
+              <input readonly type="text" class="form-control" aria-describedby="grlc" value="0">
+
+          </div>
+          <small class="form-text text-muted">Only counts transactions with 6 confirmations.</small>
+
+          <br>
+
+          <label>Frozen Funds</label>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="grlc">₲</span>
+              </div>
+              <input readonly type="text" class="form-control" aria-describedby="grlc" value="0">
+
+          </div>
+          <small class="form-text text-muted">Frozen funds from bidding.</small>
+          <br>
+
+          <div class="form-group">
+              <input type="button" class="btn btn-success" value="Generate New Address" />
+          </div>
+
+          <div class="form-group">
+              <input type="button" class="btn btn-warning" value="Withdraw GRLC" onclick="window.location.href='/withdraw.html'" />
+          </div>
+        </div>
+        <div class="col-sm wrapper">
+        <h2>Listings | <a href="/ratings.html">Reviews</a></h2><br>
+        <div style="overflow-y:auto;max-height:500px;">
+        <table class="table table-no-border">
+                <tr class=\"{$ended}\">
+                <td style=\"word-wrap: break-word;\"><a href=\"/item.html">Item</a></td>
+                <td>₲1</td>
+                <td><span style=\"color:;\">10:23:32</span></td>
+                <td>23 June 2018</td>
+                </tr>
+          </table>
+        </div>
+        </div>
+        <div class="col-sm wrapper">
+        <h2>Purchases</h2><br>
+        <div style="overflow-y:auto;max-height:500px;">
+        <table class="table table-no-border">
+                <tr>
+                <td style=\"word-wrap: break-word;\"><a href=\"/item.html">Item</a></td>
+                <td>₲1</td>
+                <td>22 June 2018</td>
+                  <td><a href=\"/review.html">REVIEW</a></td>
+                  <td></td>
+                </tr>
+          </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        <script>
+        jQuery('#qrcode').qrcode("garlicoin:Gjnsbdvcuibw3u8rt?message=grlcBuy");
+        </script>
+    </body>
+    </html>

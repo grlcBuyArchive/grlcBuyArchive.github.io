@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Create Listing</title>
+
+    <style type="text/css">
+
+        .col-2{ padding: 20px; }
+
+        .col-3{ padding: 20px; }
+
+    </style>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <style>
+    nav {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+    <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link nav" href="/me.html">Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/create.html">Create Listing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Balance: ₲0
+      </span>
+      <form class="form-inline my-2 my-lg-0 nav">
+        <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+        <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+        <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+      </form>
+    </div>
+  </nav>
+
+<form action="" method="post" onSubmit="return saveComment();">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+
+        <h2>Create Listing (₲1 fee)</h2><hr>
+
+            <div class="form-group">
+
+                <label>Title</label>
+
+                <input type="text" name="title" class="form-control" maxlength="80" id="title" value="" required>
+
+
+                <small style="text-align:right;" class="form-text text-muted"><span id="titlelen">0</span>/80</small>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea type="text" name="description" maxlength="1000" id="desc" class="form-control" required></textarea>
+
+                <small style="text-align:right;" class="form-text text-muted"><span id="desclen">0</span>/1000</small>
+
+            </div>
+
+            <label>Price</label>
+            <div class="input-group">
+
+
+
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="grlc">₲</span>
+                </div>
+
+                <input type="number" step="0.01" min="1" name="price" class="form-control" required>
+
+            </div>
+            <br>
+            <label>Quantity of Item</label>
+            <div class="input-group">
+
+                <input type="number" step="1" min="1" max="100" name="quantity" id="quantity" class="form-control" placeholder="0" required>
+
+            </div>
+            <br>
+            <label>Listing Length (Days)</label>
+            <div class="input-group">
+                <input type="number" step="1" min="1" max="30" name="length" id="length" class="form-control" placeholder="0" required>
+
+            </div>
+
+              <div class="form-group">
+                <label>Item Location</label>
+                <select class="form-control" name="country">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Item Type</label>
+                <select class="form-control" name="type" id="type" onchange="typeChange()">
+                    <option value="">Please select</option>
+                    <option value="1">Digital</option>
+                    <option value="0">Physical</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="condition">
+                <label>Item Condition</label>
+                <select class="form-control" name="condition">
+                    <option value="">Please select</option>
+                    <option value="0">New</option>
+                    <option value="1">New other</option>
+                    <option value="2">Manufacturer refurbished</option>
+                    <option value="3">Seller refurbished</option>
+                    <option value="4">Used</option>
+                    <option value="5">For parts or not working</option>
+                </select>
+            </div>
+          </div>
+          <div class="col-3">
+          <br><br><br>
+            <label>Thumbnail</label>
+            <div class="input-group">
+
+                <div class="input-group-prepend">
+                        <span class="input-group-text">https://i.imgur.com/</span>
+                </div>
+                <input type="text" name="imgur" class="form-control" placeholder="nzZFCFY.jpg" required>
+
+            </div>
+            <small class="form-text text-muted">Upload at <a target="_blank" href="https://imgur.com/upload">imgur.com</a> and get direct image link by right clicking on image and opening in new tab, only copy the last bit ex: "nzZFCFY.jpg". 4:3 is optimum.</small>
+            <br>
+
+			<label>Imgur Album</label>
+            <div class="input-group">
+
+                <div class="input-group-prepend">
+                        <span class="input-group-text">https://imgur.com/a/</span>
+                </div>
+                <input type="text" name="album" class="form-control" placeholder="1fSOG" required>
+
+            </div>
+            <small class="form-text text-muted">Upload at <a target="_blank" href="https://imgur.com/upload">imgur.com</a> and get album link by copying last bit of address on album ex: "1fSOG". You are automatically taken to album after upload.</small>
+            <br>
+            <div class="g-recaptcha" data-sitekey="6LcwHFYUAAAAAKE-MVNp-1AdEsWvpfo6CXkjNf3j"></div><br>
+
+            <div class="form-group">
+
+                <input type="submit" class="btn btn-primary" value="Submit">
+
+            </div>
+
+            <!--<p>Don't have an account? <a href="register.html">Sign up now</a>.</p>-->
+
+
+    </div>
+    </div>
+    </div>
+    </form>
+
+    <script>
+        document.getElementById('title').onkeyup = function(){
+            document.getElementById("titlelen").innerHTML = this.value.length;
+            if (this.value.length > 80) {
+                document.getElementById("titlelen").style.color = "red";
+            } else if (this.value.length > 59) {
+                document.getElementById("titlelen").style.color = "orange";
+            } else {
+                document.getElementById("titlelen").style.color = "#6c757d";
+            }
+        }
+
+        document.getElementById('desc').onkeyup = function(){
+            document.getElementById("desclen").innerHTML = this.value.length;
+            if (this.value.length > 1000) {
+                document.getElementById("desclen").style.color = "red";
+            } else if (this.value.length > 900) {
+                document.getElementById("desclen").style.color = "orange";
+            } else {
+                document.getElementById("desclen").style.color = "#6c757d";
+            }
+        }
+
+
+        document.getElementById("title").value = localStorage.getItem("title");
+        document.getElementById("desc").value = localStorage.getItem("desc");
+
+        function saveComment() {
+            var desc = document.getElementById("desc").value;
+            var title = document.getElementById("title").value;
+            localStorage.setItem("desc", desc);
+            localStorage.setItem("title", title);
+
+            //location.reload();
+            //return false;
+            return true;
+        }
+
+        function typeChange() {
+          var e = document.getElementById("type");
+          var strUser = e.options[e.selectedIndex].value;
+
+          if(strUser == 1) {
+            var element = document.getElementById("condition");
+            element.classList.add("invisible");
+          } else {
+            var element = document.getElementById("condition");
+            element.classList.remove("invisible");
+          }
+        }
+    </script>
+
+</body>
+
+</html>

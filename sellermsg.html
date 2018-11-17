@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+.wrapper{ width: 500px; padding: 20px; margin: auto; width: 25%; word-wrap: break-word;}
+</style>
+</head>
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <style>
+    nav {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+    <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link nav" href="/me.html">Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/create.html">Create Listing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Balance: ₲0
+      </span>
+      <form class="form-inline my-2 my-lg-0 nav">
+        <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+        <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+        <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+      </form>
+    </div>
+  </nav>
+
+<div class="wrapper">
+<br>
+<h1>Buyers Details</h1>
+<p>Please safely store these details and type <b>grlcBuy</b> and submit to delete this message.</p>
+<div class="form-group">
+  <textarea readonly class="form-control" rows="10">Buyer&#013;==========&#013;&#013;grlcBuy&#013;&#013;Message&#013;==========&#013;&#013;My address is:</textarea>
+</div>
+<p style="color:red">This is irreversible, make sure you have it stored safely!</p>
+<form action="" autocomplete="off" method="post">
+<div class="form-group">
+<input type="text" name="title" id="title" class="form-control" required>
+</div>
+<div class="form-group">
+<input type="submit" class="btn btn-danger btn-block disabled" id="button" value="Delete Message">
+</div>
+</form>
+</div>
+<script>
+document.getElementById('title').onkeyup = function(){
+  if(document.getElementById('title').value == 'grlcBuy'){
+    document.getElementById("button").classList.remove('disabled');
+  } else{
+    document.getElementById("button").classList.add('disabled');
+  }
+}
+</script>
+</body>
+</html>

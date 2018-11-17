@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>grlcBuy's Profile</title>
+
+    </head>
+
+    <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <style>
+        nav {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        }
+      </style>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link nav" href="/me.html">Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/create.html">Create Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Balance: ₲0
+          </span>
+          <form class="form-inline my-2 my-lg-0 nav">
+            <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+          </form>
+        </div>
+      </nav>
+
+      <style type="text/css">
+          .col-3{ padding: 20px; }
+          .col-4{ padding: 20px; }
+      </style>
+
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-3">
+
+            <h2>Profile</h2>
+
+            <p>This is <b>grlcBuy</b>'s profile.</p>
+
+            <form action="" method="post">
+
+                <div class="form-group">
+
+                    <label>Username</label>
+
+                    <input readonly type="text" name="username"class="form-control" value="grlcBuy">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>About</label>
+
+                    <textarea readonly type="text" rows="5" name="about" class="form-control" value="xd" placeholder="grlcBuy hasn't told us much..."></textarea>
+
+                </div>
+
+                <table class="table">
+                <tbody>
+                    <tr>
+                        <td width="20px"><img width="20px" height="20px" src="https://i.imgur.com/6Rwj5ez.png"></td>
+                        <td width="40px">Positive</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td width="20px"><img width="20px" height="20px" src="https://i.imgur.com/m111anE.png"></td>
+                        <td width="40px">Neutral</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td width="20px"><img width="20px" height="20px" src="https://i.imgur.com/kd9oxSV.png"></td>
+                        <td width="40px">Negative</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-info" value="View Ratings" onclick="window.location.href='/ratings.html'" />
+                </div>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" value="Message" onclick="window.location.href='/message.html'" />
+                </div>
+
+                  <div class="form-group">
+                      <input type="button" class="btn btn-danger" value="Delete User" onclick="window.location.href='/deleteuser.html'" />
+                  </div>
+
+            </form>
+
+        </div>
+        <div class="col-4">
+          <h2>Listings</h2><br>
+          <div style="overflow-y:auto;max-height:500px;">
+          <table class="table table-no-border">
+                  <tr>
+                  <td style=\"word-wrap: break-word;\"><a href=\"/item.html">Item</a></td>
+                  <td>₲1</td>
+                  <td><span style=\"color:;\"></span></td>
+                  </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-7">
+        </div>
+        </div>
+        </div>
+
+    </body>
+
+    </html>

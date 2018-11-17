@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Withdraw</title>
+
+        <style type="text/css">
+            .wrapper{ width: 420px; padding: 20px; }
+        </style>
+
+    </head>
+
+    <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <style>
+        nav {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        }
+      </style>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <img src="https://i.imgur.com/A7zsESI.png" width="113" height="31" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link nav" href="/">Home <span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link nav" href="/me.html">Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/create.html">Create Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/docs.html">Docs <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/blog.html">Blog <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" href="/contact.html">Contact <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav" target="_blank" href="/discord">Discord <span class="sr-only"></span></a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Balance: ₲0
+          </span>
+          <form class="form-inline my-2 my-lg-0 nav">
+            <a href="/inbox.html"><img src="https://i.imgur.com/5wVnryc.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/notify.html"><img src="https://i.imgur.com/Yn2yw0n.png" width="25" height="25" style="margin:0px 20px;" class="d-inline-block align-top" alt=""></a>
+            <a href="/login.html" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</a>
+          </form>
+        </div>
+      </nav>
+
+
+      <style>
+      .box {
+        padding: 20px;
+      }
+      </style>
+
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-3 box">
+
+            <h2>Withdraw</h2>
+
+            <p>Use this to withdraw GRLC from your account. ₲0.0005 will be deducted from your account.</p>
+
+            <form action="" method="post">
+
+                <div class="form-group">
+
+                    <label>Withdraw Address</label>
+
+                    <input type="text" name="withdraw" class="form-control" value="">
+
+                </div>
+
+                <label>Amount</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="grlc">₲</span>
+                    </div>
+                    <input type="number" step="0.00000001" min="0" name="amount" class="form-control" aria-describedby="grlc" placeholder="New Lambo">
+
+                </div>
+                <br>
+
+                <label>Balance</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="grlc">₲</span>
+                    </div>
+                    <input readonly type="text" class="form-control" aria-describedby="grlc" value="1">
+
+                </div>
+                <br>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
+                  Withdraw
+                </button>
+
+
+        </div>
+        <div class="col-6 box">
+          <h2>Withdrawals</h2>
+          <div style="overflow-y:auto;height:250px;">
+          <table class="table table-no-border">
+                  <tr>
+                  <td>₲1</td>
+                  <td style="word-wrap: break-word;"><a target="_blank" href="">Guisdgfbyusd3</a></td>
+                  <td><a target=\"_blank\" href=\"http://ip-api.com/#" . htmlspecialchars($row['ip']) . "\">192.168.1.1</td>
+                  <td>22 June 2018 UTC</td>
+                  </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Withdraw Confirm</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <label>Password</label>
+              <div class="input-group">
+                  <input type="password" name="pass" class="form-control">
+              </div>
+              <br>
+              <label>2FA Code</label>
+              <div class="input-group">
+                  <input type="text" name="2fa" class="form-control" placeholder="000000">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Confirm</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </body>
+
+    </html>
